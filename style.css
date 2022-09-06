@@ -1,5 +1,5 @@
 /* REGLAGE GENERAL / general setting */
-*{
+*, ::before, ::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,3 +10,20 @@ h1, h2, h3, button, nav, .link a{
     text-transform: uppercase;
 }
 /* NAV */
+nav ul{
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+nav li{
+    margin: 20px;
+}
+nav li:hover{
+    border-top: 3px solid purple;
+    transition: .2s;
+    cursor: pointer;
+    color: rgb(46, 174, 72);
+}
