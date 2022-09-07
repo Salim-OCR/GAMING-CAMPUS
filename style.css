@@ -10,20 +10,50 @@ h1, h2, h3, button, nav, .link a{
     text-transform: uppercase;
 }
 /* NAV */
-nav ul{
+nav ul {
     border: 1px solid red;
+    height: 8vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 1.1rem;
     font-weight: bold;
 }
 nav li{
-    margin: 20px;
+    position: relative;
+}
+nav li::after{
+    content: "";
+    position: absolute;
+    background-color: purple;
+    width: 0;
+    height: 5px;
+    left: 0;
+    top: -26px;
+    transform: scale(0,1);
 }
 nav li:hover{
-    border-top: 3px solid purple;
-    transition: .2s;
     cursor: pointer;
-    color: rgb(46, 174, 72);
+    color: purple;
+}
+nav li:hover::after{
+    width: 100%;
+    transition: .4s ease;
+    transform: scale(1,1);
+}
+#language{
+    background-color: rgba(128, 128, 128, 0.31);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+#language::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    left: 0;
+    top: -17px;
+}
+#language:hover::after{
+    width: 100%;
 }
